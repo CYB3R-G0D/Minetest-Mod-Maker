@@ -1,0 +1,222 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap");
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: #000;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+body {
+	font-family: "Roboto Mono";
+	font-size: 18px;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+}
+header::-webkit-scrollbar {
+  display: none;
+}
+#header {
+	height: 100px;
+	width: 100%;
+	background: linear-gradient(rgba(0, 0, 0, 0.342), rgba(0, 0, 0, 342)),
+		url("../media/1.jpg") no-repeat center bottom / cover;
+	color: whitesmoke;
+}
+.container {
+	width: 90%;
+	height: 100%;
+	max-width: 1200px;
+	margin: 0 auto;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+#header h1 {
+	font-size: 3rem;
+	margin-bottom: 0.5rem;
+	font-family: cursive;
+}
+#header h2 {
+	font-family: cursive;
+	font-size: 1.5rem;
+	margin-bottom: 2rem;
+}
+#header p {
+	font-size: 1.2rem;
+    color: black;
+	max-width: 50%;
+}
+@media only screen and (max-width: 768px) {
+	html {
+		font-size: 10px;
+	}
+}
+.form{
+    margin: 100px;
+}
+.hide {
+  display: none;
+}
+h5:hover + .hide {
+  display: block;
+  color: red;
+}
+input[type=text]{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: none;
+    border-bottom: solid 1px black;
+    font-size: 15px;
+    text-transform: lowercase;
+    width: 50%;
+    display: block;
+}
+input[type=text]:focus{
+    outline: none;
+}
+textarea[type=text]{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: none;
+    border-bottom: solid 1px black;
+    font-size: 15px;
+    resize: none;
+    width: 50%;
+    display: block;
+}
+textarea[type=text]:focus{
+    outline: none;
+}
+select {
+    cursor:pointer;
+    display:inline-block;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: solid 1px black;
+    font-size: 15px;
+    width: 50%;
+    padding: 5px;
+    display: block;    
+}
+select:focus {
+    outline: none;
+}
+input[type=checkbox] {
+    outline: none;
+}
+button {
+    margin-top: 20px;
+    border: solid 1px #000;
+    background-color: #fefefe;
+    color: #000;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    animation: pulse 1s infinite;
+}
+@keyframes pulse {
+  0%,
+  100% {
+    animation-timing-function: ease-in;
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+button:hover {
+    color: #fefefe;
+    background-color: black;
+    outline: none;
+}
+input[type="submit"] {
+  margin-top: 20px;
+  border: solid 1px #000;
+  background-color: #fefefe;
+  color: #000;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+}
+input[type="submit"]:hover {
+  color: #fefefe;
+  background-color: black;
+  outline: none;
+}
+@keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
+}
+@-webkit-keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
+}
+a {
+  text-decoration: none;
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  padding: 10px;
+}
+.grid-item {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  font-size: 30px;
+  text-align: center;
+}
+#output {
+    border-bottom: none;
+    width: 100%;
+}
+.modal {
+  display: none;
+  position: absolute;
+  z-index: 1;
+  padding-top: 200px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: rgba(0,0,0,0.4);
+}
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+ul li {
+    margin: 20px;
+}

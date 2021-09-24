@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minetest Mod Maker</title>
+    <link rel="stylesheet" href="assets/style.css">
+    <link rel="icon" href="media/32x32.png">
+    <script src="assets/app.js"></script>
+    <script src="https://code.iconify.design/2/2.0.4/iconify.min.js"></script>
+    <script src="dist/jszip.js"></script>
+    <script src="dist/jszip.min.js"></script>
+    <script src="dist/FileSaver.js"></script>
+</head>
+<body>
+    <header>
+        <section id="header">
+            <div class="container">
+                <h1>Minetest Mod Maker</h1>
+            </div>
+        </section>
+    </header>
+    <div class="form">
+        <h3>Mod Name</h3>
+        <input placeholder="mymod" id="pname" type="text" onkeypress="return event.charCode != 32" required="required">
+        <br>
+        <h3>Create Node</h3>
+        <hr>
+        <br>
+        <h5>Node name</h5>
+        <input placeholder="node_name" id="nname" type="text" onkeypress="return event.charCode != 32" required="required">
+        <h5>Node description</h5>
+        <textarea placeholder="Description" id="ndescription" wrap="on" cols="30" rows="3" type="text" maxlength="250"></textarea>
+        <h5>Dig type</h5>
+        <p class="hide">The following groups determine digging times. The rating can be between 1 and 3; higher ratings result in faster digging. eg:{crumbly = 2}</p>
+        <select id="group">
+        <option value="crumbly">crumbly- can dug with sapde - dirt</option>
+        <option value="cracky">cracky - broken with pickaxe - stone</option>
+        <option value="snappy">snappy - dug using any tool - leaves</option>
+        <option value="choppy">choppy - chopped using axe - tree</option>
+        <option value="fleshy">fleshy - gives blood effects when hitting</option>
+        <option value="explody">explody - prone to explosions</option>
+        <option value="oddly_breakable_by_hand">oddly_breakable_by_hand - breakable with any tool including hand</option>
+        </select>
+        <br>
+        <h3>Crafting Recipe</h3>
+        <hr>
+        <br>
+        <h5>Type the ingredients required for crafting the item</h5>
+        <div class="grid-container">
+            <input id="in1" type="text" class="griid-item">
+            <input id="in2" type="text" class="griid-item">
+            <input id="in3" type="text" class="griid-item">
+            <input id="in4" type="text" class="griid-item">
+            <input id="in5" type="text" class="griid-item">
+            <input id="in6" type="text" class="griid-item">
+            <input id="in7" type="text" class="griid-item">
+            <input id="in8" type="text" class="griid-item">
+            <input id="in9" type="text" class="griid-item">
+        </div>
+        <button id="submit" onclick="submit()">Generate code</button>
+    </div>
+    <div id="pop" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h3>Copy the code</h3>
+            <h5 id="dsp1"></h5>
+            <textarea type="text" cols="50" rows="22" id="output"></textarea>
+            <h5 id="dsp2"></h5>
+            <h5>Code by Cyb3rG0d -<a href="https://github.com/CYB3R-G0D"> GitHub</a></h5>
+            <br>
+            <h6>*Related <a href="https://dev.minetest.net/Modding_Overview">article</a></h6>
+            <input id="copy" value="Copy" type="submit">
+            <input id="download" value="Download code" type="submit">
+        </div>
+    </div>
+</body>
+</html>
